@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { Leaf, Sun, Droplets, PhoneCall } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import Navbar from "@/components/Navbar";
 
 // --------------------------------------------------------------
 //  Next.js Home page for a landscaping business (App Router)
@@ -35,6 +36,7 @@ export default function HomePage() {
 
 	return (
 		<main className="flex flex-col bg-white text-neutral-800">
+			<Navbar />
 			{/* ───────────────────── Hero ───────────────────── */}
 			<section className="relative isolate grid place-items-center h-[80vh] overflow-hidden">
 				{/* Background image + color overlay pulled out of document flow */}
