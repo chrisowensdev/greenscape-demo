@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { Leaf, Sun, Droplets, PhoneCall } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import Navbar from "@/components/Navbar";
+import Navbar from "@/components/layout/Navbar";
 
 // --------------------------------------------------------------
 //  Next.js Home page for a landscaping business (App Router)
