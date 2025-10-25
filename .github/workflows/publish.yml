@@ -23,8 +23,8 @@ jobs:
               # Build static export (produces out/)
             - run: npm run build
 
-            # If you use next-sitemap
-            - run: npm run sitemap
+            # # If you use next-sitemap
+            # - run: npm run sitemap
 
             # Ensure .htaccess gets shipped
             - name: Include .htaccess
