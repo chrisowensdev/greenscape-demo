@@ -9,21 +9,23 @@ export async function generateStaticParams() {
 export async function generateMetadata({
 	params,
 }: {
-	params: { slug: string };
+	params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
-	const s = getService(params.slug);
+	const { slug } = await params;
+	const s = getService(slug);
 	return {
 		title: s?.seo?.title ?? `${s?.name} | Greenscape`,
 		description: s?.seo?.description ?? s?.summary,
 	};
 }
 
-export default function ServiceDetail({
+export default async function ServiceDetail({
 	params,
 }: {
-	params: { slug: string };
+	params: Promise<{ slug: string }>;
 }) {
-	const s = getService(params.slug);
+	const { slug } = await params;
+	const s = getService(slug);
 	if (!s) return null;
 
 	return (
