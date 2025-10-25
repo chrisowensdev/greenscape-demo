@@ -1,5 +1,6 @@
 import { getService, listServices } from "@/utils/content";
 import type { Metadata } from "next";
+import Image from "next/image";
 
 export async function generateStaticParams() {
 	return listServices().map((s) => ({ slug: s.slug }));
@@ -43,10 +44,12 @@ export default function ServiceDetail({
 			{s.gallery?.length ? (
 				<div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
 					{s.gallery.map((src) => (
-						<img
+						<Image
 							key={src}
 							src={src}
 							alt={`${s.name} example`}
+							width={600}
+							height={400}
 							className="rounded-xl"
 						/>
 					))}
