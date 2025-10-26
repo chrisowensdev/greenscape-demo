@@ -1,0 +1,73 @@
+@import "tailwindcss";
+@import "tailwindcss/preflight";
+@import "tailwindcss/utilities";
+
+:root {
+	/* Fallback (light) */
+	--bg: 0 0% 100%;
+	--fg: 210 9% 20%;
+	--muted: 210 16% 93%;
+	--border: 210 14% 89%;
+	--primary: 150 49% 35%; /* emerald ~ #2f855a */
+	--primary-contrast: 0 0% 100%;
+	--accent: 96 65% 85%; /* light mint */
+	--ring: 150 49% 35%;
+	--font-heading: "Lora", ui-serif, Georgia, Cambria, "Times New Roman", Times,
+		serif;
+	--font-body: "Nunito", ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+		Roboto, Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji",
+		"Segoe UI Symbol";
+}
+
+.theme-greenscape {
+	--bg: 0 0% 100%;
+	--fg: 210 9% 18%;
+	--muted: 150 33% 96%;
+	--border: 150 24% 90%;
+	--primary: 150 49% 35%;
+	--primary-contrast: 0 0% 100%;
+	--accent: 96 65% 85%;
+	--ring: 150 49% 35%;
+}
+
+html,
+body {
+	background-color: hsl(var(--bg));
+	color: hsl(var(--fg));
+}
+
+/* Organic texture background */
+.bg-leaf-texture {
+	background: radial-gradient(
+			1200px 600px at 10% -10%,
+			hsla(150, 50%, 95%, 0.7),
+			transparent 60%
+		),
+		radial-gradient(
+			800px 500px at 90% 0%,
+			hsla(96, 65%, 90%, 0.8),
+			transparent 55%
+		),
+		linear-gradient(180deg, hsl(var(--bg)), hsl(var(--bg)));
+}
+
+/* Subtle noise (data-URI friendly alternative if you like) */
+/* .bg-noise {
+	background-image: url("data:image/svg+xml;utf8,\
+<svg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'>\
+<filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' stitchTiles='stitch'/></filter>\
+<rect width='100%' height='100%' filter='url(%23n)' opacity='.03'/>\
+</svg>");
+} */
+
+/* Rounded section framing */
+.section-soft {
+	border-radius: 1.5rem;
+	border: 1px solid hsl(var(--border));
+	background: hsl(var(--bg));
+}
+
+/* Button focus ring color */
+:focus-visible {
+	outline-color: hsl(var(--ring));
+}
