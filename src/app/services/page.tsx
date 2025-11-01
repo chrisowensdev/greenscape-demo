@@ -2,6 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { services } from "@/content/services";
 import { faqs } from "@/content/faqs"; // optional if you added it
+import Section from "@/components/section/Section";
+import LeafDivider from "@/components/section/LeafDivider";
 
 export const metadata = {
 	title: "Services | Greenscape Landscaping",
@@ -17,47 +19,50 @@ export default function ServicesPage() {
 	return (
 		<main>
 			{/* Hero */}
-			<section className="relative overflow-hidden bg-gradient-to-b from-emerald-50 to-white">
-				<div className="mx-auto max-w-6xl px-4 py-16 sm:py-20">
-					<div className="max-w-3xl">
-						<h1 className="text-3xl font-semibold tracking-tight sm:text-4xl">
-							Full-service landscaping, built for results
-						</h1>
-						<p className="mt-3 text-gray-600">
-							From weekly lawn care to complete outdoor
-							transformations, we deliver reliable quality across
-							Richmond and surrounding areas.
-						</p>
-						<div className="mt-6 flex gap-3">
-							<Link
-								href="/contact"
-								className="rounded-xl bg-emerald-600 px-5 py-3 text-white hover:bg-emerald-700"
-							>
-								Get a free quote
-							</Link>
-							<a
-								href="tel:+18045550134"
-								className="rounded-xl border border-gray-300 px-5 py-3 hover:bg-gray-50"
-							>
-								(804) 555-0134
-							</a>
-						</div>
-					</div>
-
-					{/* Jump chips */}
-					<div className="mt-8 flex flex-wrap gap-2">
-						{services.map((s) => (
-							<a
-								key={s.slug}
-								href={`#${s.slug}`}
-								className="rounded-full border border-emerald-200 bg-white px-4 py-2 text-sm hover:border-emerald-400"
-							>
-								{s.name}
-							</a>
-						))}
+			{/* <section className="relative overflow-hidden bg-gradient-to-b from-emerald-50 to-white"> */}
+			{/* <div className="mx-auto max-w-6xl px-4 py-16 sm:py-20"> */}
+			<Section bg="leaf" className="relative">
+				<div className="max-w-3xl">
+					<h1 className="text-3xl font-semibold tracking-tight sm:text-4xl h-heading">
+						Full-service landscaping, built for results
+					</h1>
+					<p className="mt-3 text-gray-600">
+						From weekly lawn care to complete outdoor
+						transformations, we deliver reliable quality across
+						Richmond and surrounding areas.
+					</p>
+					<div className="mt-6 flex gap-3">
+						<Link
+							href="/contact"
+							className="rounded-xl bg-emerald-600 px-5 py-3 text-white hover:bg-emerald-700"
+						>
+							Get a free quote
+						</Link>
+						<a
+							href="tel:+18045550134"
+							className="rounded-xl border border-gray-300 px-5 py-3 hover:bg-gray-50"
+						>
+							(804) 555-0134
+						</a>
 					</div>
 				</div>
-			</section>
+
+				{/* Jump chips */}
+				<div className="mt-8 flex flex-wrap gap-2">
+					{services.map((s) => (
+						<a
+							key={s.slug}
+							href={`#${s.slug}`}
+							className="rounded-full border border-emerald-200 bg-white px-4 py-2 text-sm hover:border-emerald-400"
+						>
+							{s.name}
+						</a>
+					))}
+				</div>
+			</Section>
+			{/* </div> */}
+			{/* </section> */}
+			<LeafDivider />
 
 			{/* Cards grid */}
 			<section className="mx-auto max-w-6xl px-4 py-12 sm:py-16">

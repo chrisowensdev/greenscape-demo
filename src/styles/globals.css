@@ -1,6 +1,7 @@
 @import "tailwindcss";
-@import "tailwindcss/preflight";
-@import "tailwindcss/utilities";
+@import "tw-animate-css";
+/* @import "tailwindcss/preflight";
+@import "tailwindcss/utilities"; */
 
 :root {
 	/* Fallback (light) */
@@ -12,11 +13,6 @@
 	--primary-contrast: 0 0% 100%;
 	--accent: 96 65% 85%; /* light mint */
 	--ring: 150 49% 35%;
-	--font-heading: "Lora", ui-serif, Georgia, Cambria, "Times New Roman", Times,
-		serif;
-	--font-body: "Nunito", ui-sans-serif, system-ui, -apple-system, "Segoe UI",
-		Roboto, Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji",
-		"Segoe UI Symbol";
 }
 
 .theme-greenscape {
@@ -34,6 +30,7 @@ html,
 body {
 	background-color: hsl(var(--bg));
 	color: hsl(var(--fg));
+	font-family: var(--font-body);
 }
 
 /* Organic texture background */
@@ -51,15 +48,6 @@ body {
 		linear-gradient(180deg, hsl(var(--bg)), hsl(var(--bg)));
 }
 
-/* Subtle noise (data-URI friendly alternative if you like) */
-/* .bg-noise {
-	background-image: url("data:image/svg+xml;utf8,\
-<svg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'>\
-<filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' stitchTiles='stitch'/></filter>\
-<rect width='100%' height='100%' filter='url(%23n)' opacity='.03'/>\
-</svg>");
-} */
-
 /* Rounded section framing */
 .section-soft {
 	border-radius: 1.5rem;
@@ -71,3 +59,24 @@ body {
 :focus-visible {
 	outline-color: hsl(var(--ring));
 }
+
+.h-heading {
+	font-family: var(--font-heading);
+}
+
+h1,
+h2 {
+	font-family: var(--font-heading);
+}
+p {
+	font-family: var(--font-body);
+}
+
+/* Subtle noise (data-URI friendly alternative if you like) */
+/* .bg-noise {
+	background-image: url("data:image/svg+xml;utf8,\
+	<svg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'>\
+		<filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' stitchTiles='stitch'/></filter>\
+		<rect width='100%' height='100%' filter='url(%23n)' opacity='.03'/>\
+	</svg>");
+} */

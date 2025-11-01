@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import { Geist, Geist_Mono, Lora, Nunito } from "next/font/google";
+import { lora, nunito } from "./fonts";
+import "@/styles/globals.css";
 import Navbar from "@/components/layout/Navbar";
 
 const geistSans = Geist({
@@ -12,6 +13,20 @@ const geistMono = Geist_Mono({
 	variable: "--font-geist-mono",
 	subsets: ["latin"],
 });
+
+// export const lora = Lora({
+// 	subsets: ["latin"],
+// 	variable: "--font-heading",
+// 	weight: ["400", "600", "700"],
+// 	display: "swap",
+// });
+
+// export const nunito = Nunito({
+// 	subsets: ["latin"],
+// 	variable: "--font-body",
+// 	weight: ["400", "500", "600", "700"],
+// 	display: "swap",
+// });
 
 export const metadata: Metadata = {
 	title: "Create Next App",
@@ -26,7 +41,10 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body
-				className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+				className={`theme-greenscape ${lora.variable} ${nunito.variable} bg-bg text-fg`}
+				style={{
+					fontFamily: "var(--font-body)",
+				}}
 			>
 				<Navbar />
 				<main className="pt-10">{children}</main>
