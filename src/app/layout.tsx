@@ -20,13 +20,15 @@ export const metadata = {
 		title: "Greenscape Landscaping | Richmond VA",
 		description:
 			"Transform your outdoor space with expert lawn care, irrigation, and design.",
-		images: ["/logo.png"], // resolved against metadataBase
+		images: ["/images/greenscape-og-card.png"], // resolved against metadataBase
 	},
 	twitter: {
 		card: "summary_large_image",
 		title: "Greenscape Landscaping | Richmond VA",
 		description: "Landscaping, lawn care, and irrigation done right.",
-		images: ["/logo.png"],
+		images: [
+			"https://greenscape.elevatedevworks.com/images/greenscape-og-card.png",
+		],
 	},
 	robots: { index: true, follow: true },
 	icons: {

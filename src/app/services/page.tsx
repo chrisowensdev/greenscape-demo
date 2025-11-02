@@ -9,19 +9,12 @@ export const metadata = {
 	title: "Services | Greenscape Landscaping",
 	description:
 		"Lawn care, landscape design, and irrigation services for Richmond, VA. Explore our offerings and request a free quote.",
-	openGraph: {
-		title: "Greenscape Landscaping Services",
-		images: ["/logo.png"],
-	},
 };
 
 export default function ServicesPage() {
 	return (
 		<>
 			<main>
-				{/* Hero */}
-				{/* <section className="relative overflow-hidden bg-gradient-to-b from-emerald-50 to-white"> */}
-				{/* <div className="mx-auto max-w-6xl px-4 py-16 sm:py-20"> */}
 				<Section bg="leaf" className="relative">
 					<div className="max-w-3xl">
 						<h1 className="text-3xl font-semibold tracking-tight sm:text-4xl h-heading">
@@ -32,7 +25,7 @@ export default function ServicesPage() {
 							transformations, we deliver reliable quality across
 							Richmond and surrounding areas.
 						</p>
-						<div className="mt-6 flex gap-3">
+						<div className="mt-6 flex flex-col md:flex-row gap-3 ">
 							<Link
 								href="/contact"
 								className="rounded-xl bg-emerald-600 px-5 py-3 text-white hover:bg-emerald-700"
@@ -61,8 +54,7 @@ export default function ServicesPage() {
 						))}
 					</div>
 				</Section>
-				{/* </div> */}
-				{/* </section> */}
+
 				<LeafDivider />
 
 				{/* Cards grid */}

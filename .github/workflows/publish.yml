@@ -24,7 +24,7 @@ jobs:
             - run: npm run build
 
             # If you use next-sitemap
-            # - run: npm run sitemap
+            - run: npm run sitemap
 
             # Ensure .htaccess gets shipped
             # - name: Include .htaccess
