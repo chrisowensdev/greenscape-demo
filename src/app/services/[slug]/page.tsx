@@ -2,6 +2,20 @@ import { getService, listServices } from "@/utils/content";
 import type { Metadata } from "next";
 import Image from "next/image";
 
+/**** Uncomment when service pages updated*/
+// export async function generateMetadata({
+// 	params,
+// }: {
+// 	params: Promise<{ slug: string }>;
+// }): Promise<Metadata> {
+// 	const { slug } = await params;
+// 	const s = getService(slug);
+// 	return {
+// 		title: s?.seo?.title ?? `${s?.name} | Greenscape`,
+// 		description: s?.seo?.description ?? s?.summary,
+// 	};
+// }
+
 export async function generateStaticParams() {
 	return listServices().map((s) => ({ slug: s.slug }));
 }
@@ -14,8 +28,12 @@ export async function generateMetadata({
 	const { slug } = await params;
 	const s = getService(slug);
 	return {
-		title: s?.seo?.title ?? `${s?.name} | Greenscape`,
+		title: "Coming Soon | Greenscape Landscaping",
 		description: s?.seo?.description ?? s?.summary,
+		robots: {
+			index: false,
+			follow: true,
+		},
 	};
 }
 

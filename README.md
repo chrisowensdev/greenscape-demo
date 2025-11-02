@@ -1,36 +1,56 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌿 Greenscape Landscaping Demo
 
-## Getting Started
+A responsive, SEO-optimized demo built with **Next.js 15 (App Router)**, **Tailwind CSS**, and **TypeScript** for local service businesses.
 
-First, run the development server:
+## 🚀 Tech Stack
+- Next.js 15 (App Router, static export)
+- TypeScript
+- Tailwind CSS
+- Framer Motion (client components)
+- next-sitemap (sitemap + robots.txt)
 
+## 🛠️ Scripts
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run build
+npm run export
+npm run sitemap
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📁 Structure
+```
+src/
+  app/
+    layout.tsx
+    page.tsx
+    services/
+      page.tsx
+      [slug]/page.tsx
+    contact/page.tsx
+  components/
+  styles/globals.css
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## ⚙️ next.config.js
+```js
+export default { output: 'export', images: { unoptimized: true }, trailingSlash: true };
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🧭 Static Export Notes
+- Provide `generateStaticParams` for `/services/[slug]`.
+- In Next 15, `params` may be a Promise; `const { slug } = await params`.
 
-## Learn More
+## 🌐 SEO
+- Use Metadata API in `layout.tsx` and per-page overrides.
+- Generate sitemap/robots with `next-sitemap`.
 
-To learn more about Next.js, take a look at the following resources:
+## 🗺️ Map Options
+- Static image (fastest)
+- Iframe embed (interactive, no API)
+- JS API via `@react-google-maps/api` (requires key)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📦 Deploy
+Upload the `/out` folder (including `/_next/static/**`) to your host (Hostinger `public_html`, Netlify, Vercel, etc.).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+© 2025 Chris Owens / Elevate DevWorks. All rights reserved.

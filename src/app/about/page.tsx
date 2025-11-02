@@ -1,16 +1,14 @@
-"use client";
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
 import { Leaf } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Hero from "@/components/layout/Hero";
 
-// --------------------------------------------------------------
-//  About page – mobile‑first refinements
-//  • Grids now use responsive columns (1/2/3)
-//  • Text blocks gain padding on small screens
-//  • Images set to w-full h-auto on mobile
-// --------------------------------------------------------------
+export const metadata = {
+	title: "About | Greenscape Landscaping",
+	description:
+		"Lawn care, landscape design, and irrigation services for Richmond, VA. Explore our offerings and request a free quote.",
+};
 
 export default function AboutPage() {
 	const principles = [
@@ -30,29 +28,10 @@ export default function AboutPage() {
 
 	return (
 		<main className="flex flex-col bg-white text-neutral-800">
-			{/* ───────────────────── Hero ───────────────────── */}
-			<section className="relative isolate grid place-items-center h-[50vh] sm:h-[60vh] overflow-hidden">
-				<div className="absolute inset-0 -z-10">
-					<Image
-						src="/images/about/about-hero.webp"
-						alt="Landscape design plans"
-						fill
-						priority
-						unoptimized
-						className="object-cover object-center"
-					/>
-					<div className="absolute inset-0 bg-green-900/60" />
-				</div>
-
-				<motion.h1
-					initial={{ opacity: 0, y: 30 }}
-					whileInView={{ opacity: 1, y: 0 }}
-					transition={{ duration: 0.6 }}
-					className="text-white text-center px-4 text-3xl sm:text-4xl md:text-5xl font-bold"
-				>
-					Our Roots, Mission, and People
-				</motion.h1>
-			</section>
+			<Hero
+				imageSrc="/images/about/about-hero.webp"
+				title="Our Roots, Mission, and People"
+			/>
 
 			{/* ─────────────────── Our Story ────────────────── */}
 			<section className="py-12 sm:py-20">
