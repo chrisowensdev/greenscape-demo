@@ -5,8 +5,9 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { Button } from "../ui/button";
 
-const menuItems: string[] = ["Home", "Services", "About", "Contact"];
+const menuItems: string[] = ["Services", "About"];
 
 const Navbar: React.FC = () => {
 	const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -44,6 +45,17 @@ const Navbar: React.FC = () => {
 							{item}
 						</Link>
 					))}
+				</div>
+				<div className="hidden sm:block">
+					<Link href="/contact">
+						<Button
+							variant="outline"
+							size="lg"
+							className="min-w-50 border-white bg-green-700 text-white rounded-2xl hover:bg-white hover:text-green-700 hover:border-green-700"
+						>
+							Get a Quote
+						</Button>
+					</Link>
 				</div>
 
 				{/* Mobile Toggle */}
@@ -85,6 +97,15 @@ const Navbar: React.FC = () => {
 									{item}
 								</Link>
 							))}
+							<Link href="/contact">
+								<Button
+									variant="outline"
+									size="lg"
+									className="min-w-50 border-white bg-green-700 text-white rounded-2xl hover:bg-white hover:text-green-700 hover:border-green-700 w-full"
+								>
+									Get a Quote
+								</Button>
+							</Link>
 						</div>
 					</motion.div>
 				)}

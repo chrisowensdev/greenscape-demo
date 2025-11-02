@@ -2,6 +2,7 @@ import { lora, nunito } from "./fonts";
 import "@/styles/globals.css";
 import Navbar from "@/components/layout/Navbar";
 import LocalBusinessJsonLd from "@/components/seo/LocalBusiessJsonLd";
+import Footer from "@/components/layout/Footer";
 
 export const metadata = {
 	metadataBase: new URL("https://greenscape.elevatedevworks.com"), // set your domain
@@ -50,10 +51,11 @@ export default function RootLayout({
 					fontFamily: "var(--font-body)",
 				}}
 			>
+				<LocalBusinessJsonLd />
 				<Navbar />
 				<main className="pt-10">{children}</main>
+				<Footer />
 			</body>
-			<LocalBusinessJsonLd />
 		</html>
 	);
 }
