@@ -27,8 +27,8 @@ jobs:
             - run: npm run sitemap
 
             # Ensure .htaccess gets shipped
-            # - name: Include .htaccess
-            #   run: cp .htaccess out/.htaccess
+            - name: Include .htaccess
+              run: cp .htaccess out/.htaccess
 
             - name: Publish to deploy branch
               uses: JamesIves/github-pages-deploy-action@v4
