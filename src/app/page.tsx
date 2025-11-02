@@ -59,7 +59,7 @@ export default function HomePage() {
 					transition={{ duration: 0.6 }}
 					className="px-4 text-center text-white"
 				>
-					<h1 className="text-4xl md:text-6xl font-bold mb-4">
+					<h1 className="text-4xl md:text-6xl font-bold mb-4 h-heading">
 						Transforming Lawns into Living Art
 					</h1>
 					<p className="mb-8 text-lg md:text-2xl max-w-2xl mx-auto">
@@ -71,7 +71,7 @@ export default function HomePage() {
 						<Button
 							asChild
 							size="lg"
-							className="rounded-2xl shadow-xl min-w-50"
+							className="rounded-2xl shadow-xl min-w-50 bg-black"
 						>
 							<Link href="#quote">Get a Free Quote</Link>
 						</Button>
