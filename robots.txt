@@ -1,0 +1,12 @@
+# *
+User-agent: *
+Allow: /
+Disallow: /blog
+Disallow: /gallery
+Disallow: /testimonials
+
+# Host
+Host: https://greenscape.elevatedevworks.com
+
+# Sitemaps
+Sitemap: https://greenscape.elevatedevworks.com/sitemap.xml
