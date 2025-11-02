@@ -7,14 +7,6 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Navbar from "@/components/layout/Navbar";
 
-// --------------------------------------------------------------
-//  Next.js Home page for a landscaping business (App Router)
-//  • Tailwind for styling
-//  • shadcn/ui components for cards & buttons
-//  • Lucide icons for visuals
-//  • Framer Motion for subtle fade‑in animation
-// --------------------------------------------------------------
-
 export default function HomePage() {
 	const services = [
 		{
@@ -146,9 +138,16 @@ export default function HomePage() {
 							consultation and a digital 3‑D design so you know
 							exactly what to expect—no surprises.
 						</p>
-						<Button asChild size="lg" className="rounded-2xl">
-							<Link href="#quote">Schedule a Consultation</Link>
-						</Button>
+
+						<Link href="/contact">
+							<Button
+								variant="outline"
+								size="lg"
+								className="min-w-50 border-white bg-green-700 text-white rounded-2xl hover:bg-white hover:text-green-700 hover:border-green-700"
+							>
+								Schedule a consultation
+							</Button>
+						</Link>
 					</div>
 				</div>
 			</section>
@@ -195,84 +194,6 @@ export default function HomePage() {
 					Request a Quote
 				</Button>
 			</section>
-
-			{/* ───────────────────── Footer ──────────────────── */}
-			<footer className="bg-neutral-900 text-neutral-300 py-10">
-				<div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-10 px-6">
-					<div>
-						<h3 className="font-semibold text-white mb-3">
-							GreenScape Landscaping
-						</h3>
-						<p>
-							1234 Garden Lane
-							<br />
-							Greenville, NY 12083
-						</p>
-						<p className="mt-2">Mon‑Fri: 8 am – 6 pm</p>
-					</div>
-
-					<div>
-						<h3 className="font-semibold text-white mb-3">
-							Contact
-						</h3>
-						<p>
-							Phone:{" "}
-							<a
-								href="tel:+15551234567"
-								className="hover:underline"
-							>
-								(555) 123‑4567
-							</a>
-						</p>
-						<p>
-							Email:{" "}
-							<a
-								href="mailto:hello@greenscape.com"
-								className="hover:underline"
-							>
-								hello@greenscape.com
-							</a>
-						</p>
-					</div>
-
-					<nav>
-						<h3 className="font-semibold text-white mb-3">Links</h3>
-						<ul className="space-y-2">
-							<li>
-								<Link
-									href="#services"
-									className="hover:underline"
-								>
-									Services
-								</Link>
-							</li>
-							<li>
-								<Link href="#about" className="hover:underline">
-									About
-								</Link>
-							</li>
-							<li>
-								<Link
-									href="#gallery"
-									className="hover:underline"
-								>
-									Gallery
-								</Link>
-							</li>
-							<li>
-								<Link href="#quote" className="hover:underline">
-									Free Quote
-								</Link>
-							</li>
-						</ul>
-					</nav>
-				</div>
-
-				<p className="text-center text-sm mt-8">
-					&copy; {new Date().getFullYear()} GreenScape Landscaping.
-					All rights reserved.
-				</p>
-			</footer>
 		</main>
 	);
 }

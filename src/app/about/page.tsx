@@ -34,7 +34,7 @@ export default function AboutPage() {
 			<section className="relative isolate grid place-items-center h-[50vh] sm:h-[60vh] overflow-hidden">
 				<div className="absolute inset-0 -z-10">
 					<Image
-						src="/images/about-hero.jpg"
+						src="/images/about/about-hero.webp"
 						alt="Landscape design plans"
 						fill
 						priority
@@ -58,7 +58,7 @@ export default function AboutPage() {
 			<section className="py-12 sm:py-20">
 				<div className="max-w-5xl mx-auto grid gap-10 px-4 sm:px-6 md:grid-cols-2 items-center">
 					<Image
-						src="/images/founder.jpg"
+						src="/images/about/founder.webp"
 						alt="Founder portrait"
 						width={500}
 						height={600}
@@ -125,9 +125,16 @@ export default function AboutPage() {
 					always looking for talented horticulturists, designers, and
 					crew leads.
 				</p>
-				<Button asChild size="lg" className="rounded-2xl">
-					<Link href="/contact">Apply Now</Link>
-				</Button>
+
+				<Link href="/contact">
+					<Button
+						variant="outline"
+						size="lg"
+						className="min-w-50 border-white bg-green-700 text-white rounded-2xl hover:bg-white hover:text-green-700 hover:border-green-700"
+					>
+						Apply Now
+					</Button>
+				</Link>
 			</section>
 		</main>
 	);
