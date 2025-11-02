@@ -63,7 +63,10 @@ export default function ContactPage() {
 								hello@greenscape.com
 							</a>
 						</p>
-						<div className="w-full overflow-hidden rounded-2xl shadow-lg">
+						<div
+							className="relative w-full overflow-hidden rounded-2xl shadow-lg"
+							style={{ aspectRatio: "16 / 9" }}
+						>
 							{/* <Image
 								src="/images/map.jpg"
 								alt="Map to GreenScape"
@@ -74,9 +77,10 @@ export default function ContactPage() {
 							/> */}
 							<iframe
 								src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d32119.073058600443!2d-77.57944541091031!3d37.6093565029849!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b1153aa261658d%3A0xf4a12254c540be07!2s8401%20Mayland%20Dr%2C%20Richmond%2C%20VA%2023294!5e0!3m2!1sen!2sus!4v1762103004789!5m2!1sen!2sus"
-								width="600"
-								height="400"
+								className="absolute inset-0 h-full w-full block"
 								loading="lazy"
+								referrerPolicy="no-referrer-when-downgrade"
+								allowFullScreen
 							></iframe>
 						</div>
 					</div>

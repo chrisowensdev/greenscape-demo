@@ -97,7 +97,7 @@ const Navbar: React.FC = () => {
 									{item}
 								</Link>
 							))}
-							<Link href="/contact">
+							<Link href="/contact" onClick={toggleMenu}>
 								<Button
 									variant="outline"
 									size="lg"
