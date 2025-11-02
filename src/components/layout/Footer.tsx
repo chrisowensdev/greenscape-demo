@@ -66,6 +66,17 @@ const Footer = () => {
 				&copy; {new Date().getFullYear()} GreenScape Landscaping. All
 				rights reserved.
 			</p>
+
+			<div className="text-center text-sm mt-8">
+				<p>
+					GreenScape Landscaping – Professional demo website for
+					landscaping and outdoor design services.
+				</p>
+
+				<p className="italic w-full mt-10">
+					Designed by Elevate DevWorks.
+				</p>
+			</div>
 		</footer>
 	);
 };
