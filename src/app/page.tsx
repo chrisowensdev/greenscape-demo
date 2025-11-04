@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Leaf, Sun, Droplets, PhoneCall } from "lucide-react";
+import { Leaf, Sun, Droplets, PhoneCall, Trees } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Navbar from "@/components/layout/Navbar";
@@ -51,8 +51,8 @@ export default function HomePage() {
 					transition={{ duration: 0.6 }}
 					className="px-4 text-center text-white"
 				>
-					<h1 className="text-4xl md:text-6xl font-bold mb-4 h-heading">
-						Transforming Lawns into Living Art
+					<h1 className="text-4xl md:text-6xl font-bold mb-4 h-heading max-w-2xl mx-auto">
+						Greenscape Landscaping & Lawn Care
 					</h1>
 					<p className="mb-8 text-lg md:text-2xl max-w-2xl mx-auto">
 						Premium landscaping and lawn care services for homes &
@@ -83,6 +83,27 @@ export default function HomePage() {
 						</Button>
 					</div>
 				</motion.div>
+			</section>
+			<section className="max-w-4xl mx-auto px-4 py-12 text-gray-700 leading-relaxed text-center">
+				<Trees className="w-12 h-12 text-green-700 mb-4 mx-auto" />
+				<p>
+					At <strong>Greenscape Landscaping</strong>, we provide
+					professional
+					<strong>lawn care</strong>,{" "}
+					<strong>landscape design</strong>, and
+					<strong>irrigation services</strong> for homes and
+					businesses across
+					<strong>Richmond, VA</strong>. Our team combines creative
+					design with reliable maintenance to keep your property
+					looking its best all year round.
+				</p>
+				<p className="mt-4">
+					Whether you need seasonal cleanups, turf management, or a
+					complete outdoor redesign, Greenscape delivers custom
+					solutions built to last. Contact us today for a free quote
+					and see why local homeowners trust us for all their
+					<strong>Richmond landscaping needs</strong>.
+				</p>
 			</section>
 
 			{/* ──────────────────── Services ─────────────────── */}
