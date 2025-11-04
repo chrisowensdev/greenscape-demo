@@ -74,7 +74,14 @@ const Footer = () => {
 				</p>
 
 				<p className="italic w-full mt-10">
-					Designed by Elevate DevWorks.
+					Designed by{" "}
+					<a
+						href="https://elevatedevworks.com"
+						className="text-white"
+					>
+						Elevate DevWorks
+					</a>
+					.
 				</p>
 			</div>
 		</footer>
