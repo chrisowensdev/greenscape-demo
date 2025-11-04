@@ -7,8 +7,7 @@ import Footer from "@/components/layout/Footer";
 export const metadata = {
 	metadataBase: new URL("https://greenscape.elevatedevworks.com"), // set your domain
 	title: {
-		default:
-			"Greenscape Landscaping | Lawn Care & Landscape Design in Richmond VA",
+		default: "Greenscape | Lawn Care & Landscape Design in Richmond VA",
 		template: "%s | Greenscape Landscaping",
 	},
 	description:
