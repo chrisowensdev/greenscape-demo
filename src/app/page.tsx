@@ -89,11 +89,11 @@ export default function HomePage() {
 				<p>
 					At <strong>Greenscape Landscaping</strong>, we provide
 					professional
-					<strong>lawn care</strong>,{" "}
-					<strong>landscape design</strong>, and
-					<strong>irrigation services</strong> for homes and
+					<strong> lawn care</strong>,{" "}
+					<strong> landscape design</strong>, and
+					<strong> irrigation services</strong> for homes and
 					businesses across
-					<strong>Richmond, VA</strong>. Our team combines creative
+					<strong> Richmond, VA</strong>. Our team combines creative
 					design with reliable maintenance to keep your property
 					looking its best all year round.
 				</p>
@@ -147,12 +147,12 @@ export default function HomePage() {
 							Family‑Owned & Rooted in Quality
 						</h2>
 						<p className="mb-4">
-							GreenScape has served the Tri‑County area for over{" "}
-							<strong>15 years</strong>, combining horticultural
-							expertise with modern sustainable practices. From
-							small residential yards to sprawling commercial
-							campuses, our mission is the same: deliver
-							landscapes that thrive and delight.
+							GreenScape has served the Tri‑County area for over
+							15 years, combining horticultural expertise with
+							modern sustainable practices. From small residential
+							yards to sprawling commercial campuses, our mission
+							is the same: deliver landscapes that thrive and
+							delight.
 						</p>
 						<p className="mb-6">
 							Every project begins with a complimentary on‑site
