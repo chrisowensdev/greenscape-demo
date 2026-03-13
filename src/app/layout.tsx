@@ -28,7 +28,7 @@ export const metadata = {
 			"https://greenscape.elevatedevworks.com/images/greenscape-og-card.png",
 		],
 	},
-	robots: { index: false, follow: true },
+	robots: { index: false, follow: false },
 	icons: {
 		icon: "/greenscape-logo.png",
 		apple: "/greenscape-logo.png",
