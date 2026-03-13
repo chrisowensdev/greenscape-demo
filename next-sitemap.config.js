@@ -1,24 +1,19 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-	siteUrl: "https://greenscape.elevatedevworks.com", // non-www canonical
-	generateRobotsTxt: true, // also creates robots.txt
-	outDir: "out", // <- write into the export folder
+	siteUrl: "https://greenscape.elevatedevworks.com",
+	generateRobotsTxt: true, //
+	outDir: "out",
 	changefreq: "weekly",
 	priority: 0.7,
 	sitemapSize: 7000,
-	exclude: ["/api/*"],
-
+	exclude: ["/api/*", "/404", "/500"],
 	robotsTxtOptions: {
-		// Broad allow; add disallows if you have private routes
 		policies: [
 			{
 				userAgent: "*",
-				allow: "/",
-				disallow: ["/blog", "/gallery", "/testimonials"],
+				disallowallow: "/",
 			},
 		],
-		// If you have extra sitemaps (e.g., blog on another subdomain), add them here:
-		// additionalSitemaps: ["https://blog.elevatedevworks.com/sitemap.xml"],
 	},
 
 	// Optional: tweak priorities per route

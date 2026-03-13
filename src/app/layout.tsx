@@ -1,7 +1,6 @@
 import { lora, nunito } from "./fonts";
 import "@/styles/globals.css";
 import Navbar from "@/components/layout/Navbar";
-import LocalBusinessJsonLd from "@/components/seo/LocalBusiessJsonLd";
 import Footer from "@/components/layout/Footer";
 
 export const metadata = {
@@ -29,7 +28,7 @@ export const metadata = {
 			"https://greenscape.elevatedevworks.com/images/greenscape-og-card.png",
 		],
 	},
-	robots: { index: true, follow: true },
+	robots: { index: false, follow: false },
 	icons: {
 		icon: "/greenscape-logo.png",
 		apple: "/greenscape-logo.png",
@@ -52,7 +51,6 @@ export default function RootLayout({
 					fontFamily: "var(--font-body)",
 				}}
 			>
-				<LocalBusinessJsonLd />
 				<Navbar />
 				<main className="pt-10">{children}</main>
 				<Footer />
